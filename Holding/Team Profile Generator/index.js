@@ -1,44 +1,41 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-
-// Use writeFileSync method to use promises instead of a callback function
+// const Employee = require('./_tests_/Employee.test');
 
 const promptUser = () => {
   return inquirer.prompt([
     {
       type: 'input',
       name: 'name',
-      message: 'What is your name?',
+      message: 'What is the name of the employee?',
     },
     {
       type: 'input',
-      name: 'location',
-      message: 'Where are you from?',
+      name: 'id',
+      message: 'What is the ID of the employee?',
     },
     {
       type: 'input',
-      name: 'hobby',
-      message: 'What is your favorite hobby?',
+      name: 'email',
+      message: 'What is the email of the employee?',
     },
     {
-      type: 'input',
-      name: 'food',
-      message: 'What is your favorite food?',
+      type: 'confirm',
+      name: 'confirmation',
+      message: 'Would you like to add another employee? (Y/N)',
     },
     {
-      type: 'input',
-      name: 'github',
-      message: 'Enter your GitHub Username',
-    },
-    {
-      type: 'input',
-      name: 'linkedin',
-      message: 'Enter your LinkedIn URL.',
+      type: 'checkbox',
+      name: 'otherClasses',
+      message: 'Which type of employee would you like to add?',
+      choices: ['Engineer', 'Manager', 'Intern',]
     },
   ]);
+
+
 };
 
-const generateHTML = ({ name, location, github, linkedin }) =>
+const generateHTML = ({ name, id, email, confirmation, otherClasses}) =>
   `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,10 +59,8 @@ const generateHTML = ({ name, location, github, linkedin }) =>
 </body>
 </html>`;
 
-// Bonus using writeFileSync as a promise
 const init = () => {
   promptUser()
-  // Use writeFileSync method to use promises instead of a callback function
     .then((answers) => fs.writeFileSync('index.html', generateHTML(answers)))
     .then(() => console.log('Successfully wrote to index.html'))
     .catch((err) => console.error(err));
