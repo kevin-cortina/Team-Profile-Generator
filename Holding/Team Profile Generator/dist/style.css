@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Times New Roman', sans-serif;
+    background-image: linear-gradient(black, gray);
+}
+.row{
+    justify-content: center;
+}
+.header{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+.header .title{
+    text-align: center;
+    color: #f4f4f4;
+}
+
+.card{
+    width: 300px;
+    height: 320px;
+    border-radius: 10px;
+    box-shadow: 2px 3px 10px 0 rgb(207, 206, 206);
+    margin: 1rem;
+    background: #f4f4f4;
+    margin-bottom: 20px;
+}
+.card .card-header{
+    width: 100%;
+    height: auto;
+    padding: .5rem;
+    background-color:darkgray;
+    color:white;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.card-header .name{
+    font-weight: bold;
+}
+.card-header .job-title{
+    font-weight: 200;
+}
+.card-header .job-title .fas{
+    font-size: 1rem;
+    margin-right: 10px;
+}
+.card .card-body{
+    width: 100%;
+    height: 79.7%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-body .info{
+    width: 90%;
+    height: 60%;
+    padding: 5px;
+    list-style: none;
+    color: #333;
+}
+.card-body .info .card-info{
+    width: 100%;
+    height: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 14px;
+    padding: .3rem ;
+    text-transform: capitalize;
+    background: #eee;
+}
+.card-body .info .card-id{
+    text-transform: uppercase;
+}
+.card-body .info .card-email a,
+.card-body .info .card-github a{
+    font-size: 12px;
+    margin-left: 3px;
+    text-decoration: none;
+    color: #659bda;
+}
+.card-body .info .card-info:nth-child(1),
+.card-body .info .card-info:nth-child(2){
+    border-bottom: 1px solid rgb(161, 161, 161);
+}
+
+@media screen and (max-width: 700px){
+    .container{
+        width: 90%;
+    }
+   
+}
