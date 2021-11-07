@@ -7,7 +7,7 @@
   ## Description
   This application helps organize a teams contact information by creating an online display easily accessible by members of the team.
   
-  ##Video Link
+  ## Video Link
   https://drive.google.com/file/d/1Jf1or52v0zan5ihwVoyy4Ij6Ga-uThMa/view?usp=sharing
   
   ## Table of Contents
